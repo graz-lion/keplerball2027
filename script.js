@@ -1,3 +1,5 @@
+let extension = ""
+
 document.addEventListener("DOMContentLoaded", () => {
     let line = document.querySelector(".line")
     let firsttab = document.querySelector(".tab")
@@ -8,6 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let path = window.location.pathname.split("/").pop()
     if (path) {
         moveLine(document.getElementById(path))
+    }
+
+    let path2 = window.location.pathname.split("/")
+    path2.splice(0, 1)
+    path2.splice(path2.length - 1, 1)
+
+    if (path2.length > 0) {
+        extension = path2.join("/") + "/"
     }
 })
 
@@ -39,9 +49,9 @@ function moveLine(el, bool = true) {
     oldPage.addEventListener("transitionend", thing)
 
     if (bool == true && el.innerText.toLowerCase() != "home") {
-        window.history.pushState({ elem: el.innerText.toLowerCase() }, '', `/${el.innerText.toLowerCase()}`)
+        window.history.pushState({ elem: el.innerText.toLowerCase() }, '', `/${extension}${el.innerText.toLowerCase()}`)
     } else if (bool == true) {
-        window.history.pushState({ elem: el.innerText.toLowerCase() }, '', `/`)
+        window.history.pushState({ elem: el.innerText.toLowerCase() }, '', `/${extension}`)
     }
 }
 
