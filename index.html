@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KeplerBall2027</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="flappy bird coin.png">
+    <script type="text/javascript" src="script.js">
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="toptop">
+            <div class="tabs">
+                <div class="tab" style="margin-left: 15px;" onclick="moveLine(this)">home</div>
+                <div class="tab" onclick="moveLine(this)">kontakt</div>
+                <div class="tab" onclick="moveLine(this)" id="ticketstab">tickets</div>
+                <div class="tab" onclick="moveLine(this)">DiNg4</div>
+            </div>
+        </div>
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
+    </div>
+    <div id="home" class="page pageShown" style="position: absolute">
+        <div class="title">Maturaball BRG Kepler 2027</div>
+        <div class="image-container">
+            <img src="favicon.gif" width="711px" height="400px" style="transform: translateX(-135px)" class="image">
+            <img src="favicon2.gif" width="400px" height="400px" class="image" style="transform: translateY(-100%);">
+            <img src="flappy bird coin.png" width="400px" height="400px" class="image" style="transform: translateY(-100%);">
+        </div>
+        <div class="subtitle">Untertitel Dolor Sit amen keine ahnung text text text wann kommt umbruch keine ahnung
+            nochmal sollte schon da sein warum tippe ich das wann muss ich scrollen<br><br><br>hallo?<br><br><br>schon
+            dort? </div>
+        <button class="tickets"
+            onclick='/* window.location.href = "index2.html" */ moveLine(document.getElementById("ticketstab")); window.scrollTo({top: 0, behavior:"smooth"})'>
+            <div style="--padding: 10px; padding-left: var(--padding); padding-right: var(--padding)">tickets</div>
+        </button>
+    </div>
+    <div id="kontakt" class="page">
+        <div class="title">KONtAKt</div>
+        <div class="subtitle"><img src="email.svg" style="filter: invert(1); transform: translateY(15%)" height="4%"
+                width="4%"> komitee@keplerball2027.at <br>tel: 1234567890</div>
+    </div>
+    <div id="tickets" class="page">
+        <div class="title">tickets Kaufen</div>
+        <div class="subtitle">
+            <label for="vorname">Vorname: </label><br>
+            <input type="text" placeholder="Max" id="vorname" class="textbox"><br>
+            <label for="nachname">Nachname: </label><br>
+            <input type="text" placeholder="Mustermann" id="nachname" class="textbox"><br>
+            <label for="email">E-Mail: </label><br>
+            <input type="email" placeholder="max.mustermann@keplerball2027.at" id="email"
+                style="width: min(50%, 275px); min-width: 240px;" class="textbox"><br>
+            <label for="number">Anzahl: </label><br>
+            <input type="number" value="2" id="number" min="1" step="1" class="textbox number"><br>
+        </div>
+        <button class="tickets" onclick='submit()' style="width: min(75vw, 250px); font-size: min(200%, 10vw);">
+            <div style="--padding: min(10px, 1vw); padding-left: var(--padding); padding-right: var(--padding)">
+                ticketanfrage
+                senden</div>
+        </button>
+    </div>
+    <div id="ding4" class="page">
+        <div class="title">Seite Nummer 4</div>
+        <div class="subtitle">Eigentlich sind diese gansen extra seiten nur tests</div>
+    </div>
+    <div class="fadebottom"></div>
+</body>
+
+</html>
