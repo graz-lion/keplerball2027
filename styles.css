@@ -117,7 +117,6 @@ body {
 .page {
     perspective: 400px;
     width: 100%;
-    position: fixed;
     transform: translate3d(0, -100px, -100px);
     visibility: hidden;
     opacity: 0;
