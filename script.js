@@ -38,11 +38,9 @@ function moveLine(el, bool = true) {
     newPage.classList.add("pageShown")
     oldPage.classList.remove("pageShown")
 
-    newPage.style.position = "absolute"
 
     function thing() {
         let oldStyle = oldPage.style
-        oldStyle.position = "fixed"
         oldPage.removeEventListener("transitionend", thing)
     }
 
